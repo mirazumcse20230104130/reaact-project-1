@@ -24,7 +24,10 @@ const CreateAccount = () => {
   return (
     <div className="create-account-container">
       <header>
-        <h1>Annodaan</h1>
+        <div>
+          <h1>Annodaan</h1>
+          <p>From Surplus to Support!</p>
+        </div>
         <nav>
           <a href="/">Home</a> | <a href="/latest">Latest</a> | <a href="/about">About Us</a>
         </nav>

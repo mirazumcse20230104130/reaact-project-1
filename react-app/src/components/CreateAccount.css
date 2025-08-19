@@ -34,16 +34,27 @@ header {
   z-index: 1000;
 }
 
+header div {
+  display: flex;
+  flex-direction: column;
+}
+
 header h1 {
   margin: 0;
   font-size: 24px;
   color: #fff;
 }
 
+header p {
+  margin: 2px 0 0; /* Small margin to position below h1 */
+  font-size: 12px; /* Smaller font for the tagline */
+  color: #fff;
+}
+
 header nav a {
   color: #fff;
   text-decoration: none;
-  margin-left: 10px; /* Reduced from 20px to 10px for less gap */
+  margin-left: 10px;
   font-size: 14px;
 }
 
