@@ -1,12 +1,16 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CreateAccount from './components/CreateAccount';
-import './components/CreateAccount.css';
+import AboutUs from './components/AboutUs';
 
 function App() {
   return (
-    <div className="App">
-      <CreateAccount />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/" element={<CreateAccount />} />
+      </Routes>
+    </Router>
   );
 }
 
