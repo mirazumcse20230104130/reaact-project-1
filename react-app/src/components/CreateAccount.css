@@ -18,7 +18,7 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   text-align: left;
-  margin-top: 80px; /* Offset to avoid header overlap */
+  margin-top: 80px;
 }
 
 header {
@@ -43,16 +43,16 @@ header h1 {
 header nav a {
   color: #fff;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 10px; /* Reduced from 20px to 10px for less gap */
   font-size: 14px;
 }
 
 .form-container h2 {
   margin: 0 0 20px;
-  font-size: 22px; /* Further reduced to ensure fit */
+  font-size: 22px;
   font-weight: 700;
   color: #000;
-  padding: 10px 0; /* Added padding to give space within orange layer */
+  padding: 10px 0;
 }
 
 .form-container p {
