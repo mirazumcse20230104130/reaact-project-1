@@ -1,13 +1,77 @@
+/* Global Styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #fff0e0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Login Page Styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: #ffe6cc;
+  padding: 40px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-right: 20px solid #f4a460;
+}
+
+.login-box h2 {
+  background-color: #f4a460;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.login-box label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.login-box .forgot {
+  text-align: right;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.login-box button {
+  background-color: #f4a460;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.login-box .bottom-text {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.login-box .bottom-text span {
+  color: #f4a460;
+  cursor: pointer;
 }
