@@ -1,56 +1,49 @@
 import React, { useState } from 'react';
+import '../index.css';  // Correct path (go up one level to src)
 
-const Login = () => {
-  const [formData, setFormData] = useState({
-    username: '',
-    password: ''
-  });
 
-  const handleChange = (e) => {
-    setFormData({...formData, [e.target.name]: e.target.value});
-  };
+function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    console.log('Login Info:', formData);
-    // Add your login logic here
+    alert(`Username: ${username}, Password: ${password}`);
   };
 
   return (
-    <div className="login-container">
+    <div className="container">
+      <header className="header">
+        <h2>Annodaan</h2>
+        <p>From surplus to support!</p>
+      </header>
+
+      <nav className="navbar">
+        <div className="nav-links">
+          <span>Home</span>
+          <span>Lastest</span>
+          <span>About Us</span>
+        </div>
+        <div className="icon">👤</div>
+      </nav>
+
       <div className="login-box">
-        <h2>Login In</h2>
-        <form onSubmit={handleSubmit}>
+        <h3 className="login-title">Login In</h3>
+        <form onSubmit={handleLogin}>
           <label>Username</label>
-          <input
-            type="text"
-            name="username"
-            placeholder="Enter Username"
-            value={formData.username}
-            onChange={handleChange}
-            required
-          />
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Enter Username" required />
 
           <label>Password</label>
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter Password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" required />
 
-          <div className="forgot">Forgot Password?</div>
+          <p className="forgot">Forgot Password?</p>
 
           <button type="submit">Log In</button>
         </form>
-        <p className="bottom-text">
-          Don't Have an Account? <span>Create Account</span>
-        </p>
+        <p className="create-account">Don't Have a Account? Create Account</p>
       </div>
     </div>
   );
-};
+}
 
 export default Login;
