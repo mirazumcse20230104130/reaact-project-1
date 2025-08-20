@@ -1,0 +1,3 @@
+<div className="header-image">
+  <img src={headerImage} alt="Header" />
+</div>
