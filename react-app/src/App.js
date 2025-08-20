@@ -1,16 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
-import UserProfile from './components/UserProfile'; // Correct case sensitivity
-
-import './index.css'; // Adjusted the import path
+import UserProfile from './components/UserProfile';
+import './index.css';
 
 function App() {
   return (
-    <div>
-      <Login />
-      {/* Uncomment and use correctly capitalized component if needed */}
-      <UserProfile />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/profile" element={<UserProfile />} />
+      </Routes>
+    </Router>
   );
 }
 

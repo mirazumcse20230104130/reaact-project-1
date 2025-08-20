@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
-import '../index.css';  // ✅ Correct
+import '../index.css';
 
-
-function Userprofile() {
+function UserProfile() {   // ✅ Capital P
   const [editable, setEditable] = useState(false);
   const [user, setUser] = useState({
-    username: 'Jemima',
-    email: 'abc@gmail.com',
-    phone: '018XXXXXXXX',
-    address: 'Dhaka',
+    username: '',
+    email: '',
+    phone: '',
+    address: '',
   });
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const handleSave = () => {
+    alert('Data saved!');
+    setEditable(false);
   };
 
   return (
@@ -25,27 +29,51 @@ function Userprofile() {
       <nav className="navbar">
         <div className="nav-links">
           <span>Home</span>
-          <span>Lastest</span>
+          <span>Latest</span>
           <span>About Us</span>
         </div>
         <div className="icon">👤</div>
       </nav>
 
       <div className="profile-box">
-        <h3 className="profile-title">User</h3>
+        <h3 className="profile-title">User Profile</h3>
         <div className="profile-content">
           <div className="info">
             <label>Username</label>
-            <input name="username" value={user.username} onChange={handleChange} disabled={!editable} />
+            <input
+              name="username"
+              value={user.username}
+              onChange={handleChange}
+              placeholder="Enter Username"
+              disabled={!editable}
+            />
 
             <label>Email Id</label>
-            <input name="email" value={user.email} onChange={handleChange} disabled={!editable} />
+            <input
+              name="email"
+              value={user.email}
+              onChange={handleChange}
+              placeholder="Enter Email"
+              disabled={!editable}
+            />
 
             <label>Phone</label>
-            <input name="phone" value={user.phone} onChange={handleChange} disabled={!editable} />
+            <input
+              name="phone"
+              value={user.phone}
+              onChange={handleChange}
+              placeholder="Enter Phone Number"
+              disabled={!editable}
+            />
 
             <label>Address</label>
-            <input name="address" value={user.address} onChange={handleChange} disabled={!editable} />
+            <input
+              name="address"
+              value={user.address}
+              onChange={handleChange}
+              placeholder="Enter Address"
+              disabled={!editable}
+            />
           </div>
 
           <div className="image-box">🖼️</div>
@@ -53,11 +81,11 @@ function Userprofile() {
 
         <div className="button-group">
           <button onClick={() => setEditable(true)}>Edit</button>
-          <button onClick={() => setEditable(false)}>Save</button>
+          <button onClick={handleSave}>Save</button>
         </div>
       </div>
     </div>
   );
 }
 
-export default Userprofile;
+export default UserProfile;

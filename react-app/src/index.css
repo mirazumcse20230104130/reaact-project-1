@@ -75,13 +75,7 @@ body {
   margin-top: 10px;
 }
 
-.login-box input {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  font-size: 14px;
-}
+
 
 .login-box button {
   margin-top: 20px;
@@ -100,6 +94,7 @@ body {
   color: #666;
   margin-top: 10px;
 }
+
 
 /* --------- User Profile Box --------- */
 .profile-box {
