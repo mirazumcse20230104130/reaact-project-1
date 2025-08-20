@@ -1,3 +1,4 @@
 <div className="header-image">
   <img src={headerImage} alt="Header" />
+  <div className="overlay-text">Our Mission & Impact</div>
 </div>

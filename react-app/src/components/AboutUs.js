@@ -29,6 +29,7 @@ const AboutUs = () => {
         <div className="content-section">
           <div className="header-image">
             <img src={headerImage} alt="Header" />
+            <div className="overlay-text">Our Mission & Impact</div>
           </div>
           {showMission && (
             <div className="mission-boxes">
